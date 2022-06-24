@@ -1,0 +1,21 @@
+App name : Rewardz Tech
+Package name : com.application
+
+Used concept : Kotlin , MVVM ,coroutines , Data binding , Live Data , View model , Room database , Custom font , Test cases
+
+=========================
+Apk
+
+if you want to check map then please find below apk with map key
+https://drive.google.com/file/d/1YH4ev5IdCc_NtEn-8dXnfE2qUGgUrBzs/view?usp=sharing
+
+=========================
+Note:
+From document api is not working so i added some static data in JSON file and add that JSON data in room database
+from that fetch data from list screen.
+
+Map:
+I have implement Google Map and key of the map in Android Manifest which i removed.
+If you place your working key over there Google Map feature will working fine.
+
+

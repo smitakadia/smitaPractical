@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Rewardz Tech</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_things">Things to Deliver</string>
+    <string name="title_delivery_detail">Delivery Details</string>
+    <string name="str_please_wait">Please Wait</string>
+    <string name="str_search">Search</string>
+    <string name="looking_for">Looking for</string>
+    <string name="something_specific">Something specific?</string>
+    <string name="delivery_text">Things to Deliver</string>
+    <string name="location_text">Location</string>
+    <string name="dummy_text">The long barrow was built on land previously inhabited in the Mesolithic period. It consisted of a sub-rectangular earthen tumulus, estimated to have been 15 metres (50 feet) in length....</string>
+</resources>

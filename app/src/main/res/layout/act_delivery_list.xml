@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.ActDeliveryList">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/default_horizontal_margin"
+        android:layout_marginTop="@dimen/welcome_margin_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_welcome"
+            style="@style/welcome_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hi,"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_user_name"
+            style="@style/welcome_text_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAlignment="viewStart"
+            android:layout_marginStart="5dp"
+            app:layout_constraintEnd_toStartOf="@+id/iv_notification"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@+id/tv_welcome"
+            app:layout_constraintTop_toTopOf="@+id/tv_welcome"
+            android:text="John"
+            tools:text="" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="@dimen/default_nav_item_badge_padding"
+            android:src="@drawable/ic_bell_with_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_welcome" />
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5.25dp"
+            android:src="@drawable/ic_location_home"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_welcome" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_location"
+            style="@style/AppTextBody3Black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4.5dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingStart="5dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="70dp"
+            android:paddingBottom="5dp"
+            android:textAlignment="textStart"
+            android:text="Riyadh, Saudi Arabia"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_location"
+            app:layout_constraintStart_toEndOf="@+id/iv_location"
+            app:layout_constraintTop_toTopOf="@+id/iv_location"
+            tools:text="Riyadh, Saudi Arabia" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/login_icon_start_margin"
+        android:background="@color/white"
+        android:isScrollContainer="true"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_layout">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/default_horizontal_margin">
+
+    <!-- ===== Search Layout ===== -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/default_horizontal_margin"
+        android:background="@drawable/ic_search_banner"
+        android:paddingVertical="@dimen/login_icon_start_margin"
+        android:layout_marginTop="@dimen/_10sdp"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_looking_for"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            style="@style/welcome_text_name"
+            android:textColor="@color/white"
+            android:layout_marginStart="9dp"
+            android:text="@string/looking_for"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_something_specific"
+            style="@style/lookingFor"
+            android:layout_marginStart="9dp"
+            android:text="@string/something_specific"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_looking_for" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edit_search"
+            style="@style/HomeSearchAppEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/str_search"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:padding="@dimen/_5sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintStart_toStartOf="parent"
+
+            android:drawableEnd="@drawable/ic_search_with_back"
+            app:layout_constraintTop_toBottomOf="@+id/tv_something_specific" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- ===== Category Layout ===== -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/category_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/default_horizontal_margin"
+        android:layout_marginTop="@dimen/default_horizontal_card_padding"
+        app:layout_constraintTop_toBottomOf="@+id/search_layout">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_categories"
+            style="@style/AppTextBody1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/delivery_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_delivery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@+id/tv_categories"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

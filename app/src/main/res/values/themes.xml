@@ -1,0 +1,61 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Delivery" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+
+    </style>
+
+    <style name="Theme.Delivery.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Delivery.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppThemeFullScreen" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+    <style name="welcome_text" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="fontFamily">@font/app_font_regular</item>
+        <item name="android:textSize">@dimen/_20sdp</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <style name="welcome_text_name" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="fontFamily">@font/app_font_semi_bold</item>
+        <item name="android:textSize">@dimen/_20sdp</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+    <style name="lookingFor" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="fontFamily">@font/app_font_semi_bold</item>
+        <item name="android:textSize">@dimen/_16sdp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="HomeSearchAppEditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/app_font_medium</item>
+        <item name="android:textSize">@dimen/_10sdp</item>
+        <item name="android:background">@drawable/edt_search_back</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorHint">@color/lighttextColor</item>
+        <item name="android:textAlignment">viewStart</item>
+    </style>
+</resources>

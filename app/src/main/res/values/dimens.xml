@@ -1,0 +1,10 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="default_horizontal_margin">16dp</dimen>
+    <dimen name="welcome_margin_top">20.5dp</dimen>
+    <dimen name="default_nav_item_badge_padding">2dp</dimen>
+    <dimen name="login_icon_start_margin">12dp</dimen>
+    <dimen name="edt_corner">8dp</dimen>
+    <dimen name="default_horizontal_card_padding">16dp</dimen>
+    <dimen name="toolbar_margin">20dp</dimen>
+</resources>

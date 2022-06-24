@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".business_logic.restaurant_detail.view.RestaurantDetailFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/_20sdp">
+
+
+                    <androidx.core.widget.NestedScrollView
+                    android:id="@+id/nestedScroll"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="300dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/ivDelivery"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="300dp"
+                                    android:scaleType="centerCrop"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:src="@drawable/ic_res_placeholder" />
+                                <ImageView
+                                    android:id="@+id/ivBack"
+                                    style="@style/AppToolbarIconStyle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="?actionBarItemBackground"
+                                    android:src="@drawable/ic_back_white"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                            </FrameLayout>
+
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/clName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="16dp"
+                                app:layout_constraintBottom_toTopOf="@+id/cardViewParent"
+                                app:layout_constraintStart_toStartOf="parent">
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/txt_delivery"
+                                    style="@style/AppTextBody1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginEnd="50dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:text=''
+                                    android:textColor="@color/white"
+                                    android:textSize="20sp"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:text="Peter Luger Steak House" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/cardViewParent"
+                                style="@style/cardViewStyle"
+                                android:layout_marginTop="280dp"
+                                android:paddingBottom="200dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:id="@+id/cLFirst"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="16dp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+
+
+                                        <com.google.android.material.textview.MaterialTextView
+                                            android:id="@+id/tvResDescription"
+                                            style="@style/AppTextBody3Black"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="16dp"
+                                            android:ellipsize="end"
+                                            android:maxLines="4"
+                                            android:text='@string/dummy_text'
+                                            android:textAlignment="viewStart"
+                                            android:textColor="@color/textColor"
+                                            app:fontFamily="@font/app_font_regular"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            tools:text="The long barrow was built on land previously inhabited in the Mesolithic period. It consisted of a sub-rectangular earthen tumulus, estimated to have been 15 metres (50 feet) in length...."
+                                            tools:ignore="MissingConstraints,TooDeepLayout" />
+
+
+
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                    <View
+                                        android:id="@+id/vSeperator"
+                                        style="@style/AppTextSeperatorFull"
+                                        android:layout_height="9dp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/cLFirst"
+                                        android:layout_marginTop="@dimen/_10sdp"
+                                        android:layout_marginBottom="@dimen/_10sdp" />
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:id="@+id/tv_location_title"
+                                        style="@style/AppTextBody1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/location_text"
+                                        app:layout_constraintTop_toBottomOf="@+id/vSeperator"
+                                        tools:ignore="MissingConstraints"
+                                        android:layout_margin="16dp"
+                                        app:layout_constraintStart_toStartOf="parent"/>
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:id="@+id/tvLoation"
+                                        style="@style/AppTextBody3Black"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:layout_marginTop="4dp"
+                                        android:maxLines="1"
+                                        android:text="dddd"
+                                        android:textAlignment="viewStart"
+                                        app:layout_constraintTop_toBottomOf="@+id/tv_location_title"
+                                        tools:text="dddf"
+                                        android:layout_marginStart="16dp"
+                                        app:layout_constraintStart_toStartOf="parent"/>
+                                    <fragment
+                                        android:id="@+id/map"
+                                        android:name="com.google.android.gms.maps.SupportMapFragment"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_250sdp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/tvLoation"
+                                        tools:context=".ui.activities.MapsActivity"
+                                        android:layout_marginTop="@dimen/_10sdp"
+                                        android:layout_margin="16dp"
+                                        />
+
+                                    <ImageView
+                                        android:id="@+id/ivTransperent"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_250sdp"
+                                        android:src="@android:color/transparent"
+                                        app:layout_constraintTop_toBottomOf="@+id/tvLoation"/>
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.core.widget.NestedScrollView>
+
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+</layout>
